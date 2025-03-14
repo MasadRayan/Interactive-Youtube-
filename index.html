@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PH Tube</title>
+    <!-- daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Tailwind CDN -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- Font add -->
+    <style>
+        .inter-regular {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+    </style>
 </head>
-<body>
-    <header>
 
+<body class="inter-regular">
+    <header>
+        <nav class="w-11/12 mx-auto flex justify-between my-6 border-b-2 pb-7 border-[#17171733]">
+            <div class="logo">
+                <img class="w-11/12" src="image/Logo.png" alt="">
+            </div>
+            <div class="search">
+                <button class="btn rounded-lg bg-[#17171733]">Sort by view</button>
+            </div>
+            <div class="blog">
+                <button class=" btn px-5 py-3 text-white bg-[#FF1F3D] border-none rounded-lg font-normal">Blog</button>
+            </div>
+        </nav>
     </header>
-    <main>
+    <div id="catagory-container" class="md:flex justify-center gap-6 w-11/12 mx-auto pl-5 md:pl-30 mb-10">
+        <button onclick="loadVideo()" class="btn btn-sm px-3 text-white bg-[#FF1F3D] ">All</button>
+    </div>
+    
+    <section id="video-container" class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-    </main>
+        
+        <div class=" col-span-full text-center flex flex-col pt-20 justify-center items-center">
+            <img class="w-[120px] mb-5" src="image/Icon.png" alt="">
+            <h2 class="text-3xl font-bold">Oops!! Sorry, There is no content here</h2>
+        </div>
+    </section>
+    
+
+
+    <script src="script/catagory.js"></script>
+    <script src="script/loadVideo.js"></script>
+    <script src="script/loadCatagoryVideo.js"></script>
 </body>
 </html>
